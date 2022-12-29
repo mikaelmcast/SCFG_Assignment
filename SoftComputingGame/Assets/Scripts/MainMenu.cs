@@ -5,20 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void BeginnerGame()
+    public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void NoviceGame()
+
+
+
+    public void Quit()
     {
-        SceneManager.LoadScene(2);
-    }
-    public void ProfessionalGame()
-    {
-        SceneManager.LoadScene(3);
-    }
-    public void MainMenuReturn()
-    {
-        SceneManager.LoadScene(0);
+        Application.Quit();
+        Debug.Log("Player has quit the game");
     }
 }
