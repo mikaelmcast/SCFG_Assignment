@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Play()
+    void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Play();
+        }
     }
 
-
-
-    public void Quit()
+    public void Play()
     {
-        Application.Quit();
-        Debug.Log("Player has quit the game");
+        SceneManager.LoadScene(1);
     }
 }

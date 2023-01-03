@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    private float timer = 33f;
+    private float timer = 30f;
     private Text timerSeconds;
     void Start()
     {
@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         timerSeconds.text = timer.ToString("f2");
         if (timer <= 0)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }
