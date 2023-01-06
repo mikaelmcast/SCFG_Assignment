@@ -34,34 +34,71 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(int difficulty)
     {
+        Debug.Log("test");
         GameDifficulty = difficulty;
         SceneManager.sceneLoaded += SceneChanged;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Debug.Log(difficulty);
+        Cursor.visible = true;
     }
 
 
     private void SceneChanged(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log(scene.name);
         string difficulty;
-        if (scene.name == "Stranded")
+        if (scene.name == "GamePlay")
         {
             switch (GameDifficulty)
             {
                 case 3:
-                    difficulty = "Hard";
+                    difficulty = "Professional";
                     break;
                 case 2:
-                    difficulty = "Medium";
+                    difficulty = "Novice";
                     break;
                 default:
-                    difficulty = "Easy";
+                    difficulty = "Beginner";
                     break;
             }
 
 
         }
 
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Beg();
+        } 
+        else if ((Input.GetKeyDown(KeyCode.N))) 
+        {
+            Nov();
+        }
+        else if ((Input.GetKeyDown(KeyCode.O)))
+        {
+            Pro();
+        }
+    }
+
+    public void Beg()
+    {
+        SceneManager.LoadScene("GamePlay");
+        Cursor.visible = true;
+    }
+
+    public void Nov()
+    {
+        SceneManager.LoadScene("GamePlay");
+        Cursor.visible = true;
+    }
+
+    public void Pro()
+    {
+        SceneManager.LoadScene("GamePlay");
+        Cursor.visible = true;
     }
 
     private void OnDestroy()
