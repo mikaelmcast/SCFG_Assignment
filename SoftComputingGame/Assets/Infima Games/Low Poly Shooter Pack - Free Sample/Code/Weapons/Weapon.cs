@@ -83,6 +83,8 @@ namespace InfimaGames.LowPolyShooterPack
         [SerializeField]
         private AudioClip audioClipFireEmpty;
 
+
+
         #endregion
 
         #region FIELDS
@@ -127,6 +129,7 @@ namespace InfimaGames.LowPolyShooterPack
         /// The player character's camera.
         /// </summary>
         private Transform playerCamera;
+
         
         #endregion
 

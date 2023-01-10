@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void StartGame(int difficulty)
+    /*public void StartGame(int difficulty)
     {
         Debug.Log("test");
         GameDifficulty = difficulty;
@@ -40,10 +40,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Debug.Log(difficulty);
         Cursor.visible = true;
-    }
+    }*/
 
 
-    private void SceneChanged(Scene scene, LoadSceneMode mode)
+    /*private void SceneChanged(Scene scene, LoadSceneMode mode)
     {
         Debug.Log(scene.name);
         string difficulty;
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-    }
+    }*/
 
     void Update()
     {
@@ -85,25 +85,25 @@ public class GameManager : MonoBehaviour
 
     public void Beg()
     {
-        SceneManager.LoadScene("GamePlay");
-        Cursor.visible = true;
+        SceneManager.LoadScene("Beginner");
+        Debug.Log("Beginner");
     }
 
     public void Nov()
     {
-        SceneManager.LoadScene("GamePlay");
-        Cursor.visible = true;
+        SceneManager.LoadScene("Novice");
+        Debug.Log("Novice");
     }
 
     public void Pro()
     {
-        SceneManager.LoadScene("GamePlay");
-        Cursor.visible = true;
+        SceneManager.LoadScene("Professional");
+        Debug.Log("Professional");
     }
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         SceneManager.sceneLoaded -= SceneChanged;
-    }
+    }*/
 
 }
