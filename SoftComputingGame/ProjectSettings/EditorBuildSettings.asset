@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectionsMenu.unity
     guid: 081946a7980782a47b2334627eaca4ca
   - enabled: 1
-    path: Assets/Scenes/GamePlay.unity
+    path: Assets/Scenes/Beginner.unity
     guid: c32104d4700e19e4397a4dcddaa95a1a
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
