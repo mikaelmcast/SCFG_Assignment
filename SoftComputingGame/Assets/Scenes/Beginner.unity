@@ -1820,6 +1820,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3168422337102530296, guid: 19eb214b5884f124dbc32d3a586157b3,
         type: 3}
+      propertyPath: m_TagString
+      value: Blood
+      objectReference: {fileID: 0}
+    - target: {fileID: -3168422337102530296, guid: 19eb214b5884f124dbc32d3a586157b3,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1900,12 +1905,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 19eb214b5884f124dbc32d3a586157b3,
         type: 3}
       propertyPath: m_TagString
-      value: enemy
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 19eb214b5884f124dbc32d3a586157b3,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082271958561512970, guid: 19eb214b5884f124dbc32d3a586157b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blood
       objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: 19eb214b5884f124dbc32d3a586157b3,
         type: 3}

@@ -67,12 +67,23 @@ public class Projectile : MonoBehaviour {
 		}
 
 		//If bullet collides with "Blood" tag
-		if (collision.transform.tag == "Blood") 
+		if (collision.transform.tag == "Blood")
 		{
+			if (collision.gameObject.name.Contains("Head"))
+			{
+				collision.gameObject.GetComponent<HitBox>().OnProjectileHit(this, 2);
+			}
+			else
+			{
+				collision.gameObject.GetComponent<HitBox>().OnProjectileHit(this, 1);
+			}
+
 			//Instantiate random impact prefab from array
-			Instantiate (bloodImpactPrefabs [Random.Range 
-				(0, bloodImpactPrefabs.Length)], transform.position, 
-				Quaternion.LookRotation (collision.contacts [0].normal));
+			Instantiate(bloodImpactPrefabs[Random.Range
+					(0, bloodImpactPrefabs.Length)], transform.position,
+				Quaternion.LookRotation(collision.contacts[0].normal));
+			//Give damage
+
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
