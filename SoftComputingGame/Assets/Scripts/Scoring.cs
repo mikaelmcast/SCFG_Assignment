@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Scoring : MonoBehaviour
 {
@@ -28,6 +29,17 @@ public class Scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (SceneManager.GetActiveScene().name == "Beginner" && score == 100)
+        {
+            SceneManager.LoadScene("WinScene");
+        } 
+        else if (SceneManager.GetActiveScene().name == "Novice" && score == 100)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
+        else if (SceneManager.GetActiveScene().name == "Professional" && score == 100)
+        {
+            SceneManager.LoadScene("WinScene");
+        }
     }
 }
